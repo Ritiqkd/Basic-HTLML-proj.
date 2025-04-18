@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgotten password</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+        } 
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg,#153677,#4e085f), 
+            url(bg.jpg) no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+           
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(9px);
+            color: #fff;
+            border-radius: 12px;
+            padding: 50px 40px;
+            width: 450px;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.15);
+        }
+        label {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 2px solid #c2c2c2;
+            outline: none;
+            color: #101010;
+        }
+        input[type="button"] {
+            background-color: #7f3fff;
+            border: none;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 18px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 14px;
+            margin: 15px 0;
+            color: #ffffff;
+            padding: 5px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="password">New Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+        
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm your password">
+        
+        <p id="message"></p>
+        <input type="button" onclick="checkPassword()" value="Submit">
+
+
+    </form>                                                                     
+    <script>
+        function checkPassword() {
+            let password = document.getElementById("New password").value;
+            let confirmPassword = document.getElementById("confirm-password").value;
+            let message = document.getElementById("message");
+            
+            if (password.length !== 0 && confirmPassword.length !== 0)
+             {
+                if (password === confirmPassword) {
+                    message.textContent = "Passwords match";
+                    message.style.backgroundColor = "#3ae374";
+                } else {
+                    message.textContent = "Passwords don't match";
+                    message.style.backgroundColor = "#ff4d4d";
+                }
+            } else {
+                message.textContent = "Please enter both passwords";
+                message.style.backgroundColor = "#ff4d4d";
+            }
+        }
+    </script>
+
+</body>
+</html>
