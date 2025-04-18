@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>welcometo Adore SIMTRACK</title>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+          url(bg2.jpg);
+        background-size: cover;
+        font-family: sans-serif;
+      }
+      nav {
+        width: 100%;
+        height: 100px;
+        background: transparent;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .logo {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        background: whitesmoke;
+        border-radius: 8px;
+      }
+      .menu a {
+        text-decoration: none;
+        color: gray;
+        padding: 10px 20px;
+        font-size: 20px;
+        position: relative;
+      }
+      .menu a:before{
+        content: '';
+        position: absolute;   
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        border-bottom: 2px solid aqua;
+        transition: 0.4s linear;
+      }
+      .menu a:hover:before{
+        width: 90%;
+      }
+      .Logout a{
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        background: indianred;
+        border-radius: 8px;
+        transition: 0.4s;
+      }
+      .Logout a:hover{
+        background: transparent;
+        border: 1px indianred;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="Logo">  >)Adore SIMTRACK(<  </div>
+        <div class="menu">
+          <a href="home.html">Home</a>
+          <a href="trainees.html">Trainees</a>
+          <a href="task management.html">Task Management</a>
+          <a href="WFH.html">Work from Home</a>
+          <a href="profile.html">Profile</a>
+        </div>
+        <div class="Logout">
+          <a href="index.htm">Logout</a>
+        </div>
+      </nav>
+    </header>
+   
+  </body>
+</html>
